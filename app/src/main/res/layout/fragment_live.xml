@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.zhaoliugang.android.mvpviewer.LiveFragment"
+    android:background="#37383a">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_live_fragment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/id_live_Layout1">
+
+            <SurfaceView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/surface_view"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:id="@+id/id_live_Layout2"
+            android:layout_alignParentEnd="false"
+            android:layout_alignBottom="@+id/id_live_Layout1"
+            android:layout_marginBottom="5dp">
+
+            <include
+                android:id="@+id/layout_ptz"
+                layout="@layout/layout_ptz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
